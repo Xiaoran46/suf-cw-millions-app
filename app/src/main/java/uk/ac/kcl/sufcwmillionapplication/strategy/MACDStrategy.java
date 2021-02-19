@@ -1,9 +1,11 @@
 package uk.ac.kcl.sufcwmillionapplication.strategy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import uk.ac.kcl.sufcwmillionapplication.bean.CalculateResult;
 import uk.ac.kcl.sufcwmillionapplication.bean.DailyQuote;
+import uk.ac.kcl.sufcwmillionapplication.strategy.EMAStrategy;
 
 public class MACDStrategy implements FinanceStrategy{
     //short_term and long_term can get from the result of EMA(for example, MACD = EMA(26)-EMA(12))
