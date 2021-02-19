@@ -7,10 +7,10 @@ import uk.ac.kcl.sufcwmillionapplication.bean.DailyQuote;
 
 public class MACDStrategy implements FinanceStrategy{
     //short_term and long_term can get from the result of EMA(for example, MACD = EMA(26)-EMA(12))
-    public static double[]<CalculateResult> calculate(double[] short_term, double[] long_term) {
-        double[] result = new double[short_term.length];
-        for(int i = 0; i < short_term.length; i++) {
-            result[i] = short_term[i] - long_term[i];
+    public static ArrayList calculate(ArrayList short_term, ArrayList long_term) {
+        ArrayList result = new ArrayList();
+        for(int i = 0; i < short_term.size(); i++) {
+            result.add((Double)short_term.get(i) - (Double)long_term.get(i));
         }
         return result;
     }
